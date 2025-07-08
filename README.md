@@ -2,6 +2,9 @@
 
 A Java-based e-commerce system that simulates online shopping with products, customers, shopping carts, and shipping functionality.
 
+## Test Result 
+![image](https://github.com/user-attachments/assets/254bd7c8-b9bc-45d2-adb5-d84ced39cb8c)
+
 ## Overview
 
 This system demonstrates object-oriented programming principles including inheritance, interfaces, and polymorphism. It supports different types of products (perishable and non-perishable), customer management, shopping cart operations, and shipping calculations.
@@ -94,50 +97,6 @@ src/
    java -cp src Main
    ```
 
-### Example Usage
-
-```java
-// Create products
-Cheese cheese = new Cheese("Cheese", 100, 10, LocalDate.now().plusDays(7), 0.2);
-TV tv = new TV("TV", 1000, 5, 15.0);
-MobileScratchCard scratchCard = new MobileScratchCard("Mobile Scratch Card", 50, 20);
-Biscuits biscuits = new Biscuits("Biscuits", 150, 8, LocalDate.now().plusDays(10), 0.7);
-
-// Create customer
-Customer customer = new Customer("John Doe", 5000);
-
-// Create cart and add items
-Cart cart = new Cart();
-cart.add(cheese, 2);
-cart.add(tv, 1);
-cart.add(scratchCard, 2);
-cart.add(biscuits, 1);
-
-// Process checkout
-ECommerceSystem.checkout(customer, cart);
-```
-
-## Sample Output
-
-```
-** Shipment notice **
-2x Cheese 200.0g
-1x TV 15000.0g
-1x Biscuits 700.0g
-Total package weight 15.90kg
-
-** Checkout receipt **
-2x Cheese 200
-1x TV 1000
-2x Mobile Scratch Card 100
-1x Biscuits 150
-----------------------
-Subtotal 1450
-Shipping 477
-Amount 1927
-Customer balance after payment: 3073.0
-END.
-```
 
 ## Product Types
 
